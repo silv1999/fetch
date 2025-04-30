@@ -31,9 +31,9 @@
     document.getElementById("precio").value = libro.precio;
     document.getElementById("ficha").value = libro.ficha.ISBN;
     for (i=0; i<libro.genero.length;i++){
-        if ( i == libro.aficiones.length -1) {
+        if ( i == libro.genero.length -1) {
              document.getElementById("genero").value +=
-             libro.aficiones[i]
+             libro.genero[i]
         } else{
             document.getElementById("genero").value +=
             libro.genero[i]+ ","

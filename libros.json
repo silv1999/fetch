@@ -2,7 +2,7 @@
     "titulo": "La casa de los espíritus",
     "autor": "Isabel Allende",
     "precio": 9.99,
-    "disponible": false,
+    "disponible": true,
     "genero": ["misterio","narrativo"],
     "ficha": {
         "editorial": "Norte",
