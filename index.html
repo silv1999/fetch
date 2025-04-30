@@ -6,10 +6,43 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Libro</h1>
+    <form action="">
+       <p><label for="">Título: <input type="text"
+            name="titulo" id="titulo"></label></p>
+        <p><label for="">Autor: <input type="text"
+            name="autor" id="autor"></label></p>
+        <p><label for="">Precio: <input type="text"
+            name="precio" id="precio"></label></p>
+        <p><label for="">Ficha técnica: <input type="text"
+            name="ficha" id="ficha"></label></p>
+        <p><label for="">Género: <input type="text"
+            name="genero" id="genero"></label></p>
+        <p><label for="">Disponible: <input type="checkbox"
+            name="disponible" id="disponible"></label></p>
+       
+    </form>
     <script>
-       fetch('miCliente.json')
+       fetch('libros.json')
   .then(response => response.json())
-  .then(cliente => alert(cliente.nombre));
+  .then(libro => {
+    document.getElementById("titulo").value = libro.titulo;
+    document.getElementById("autor").value = libro.autor;
+    document.getElementById("precio").value = libro.precio;
+    document.getElementById("ficha").value = libro.ficha.ISBN;
+    for (i=0; i<libro.genero.length;i++){
+        if ( i == libro.aficiones.length -1) {
+             document.getElementById("genero").value +=
+             libro.aficiones[i]
+        } else{
+            document.getElementById("genero").value +=
+            libro.genero[i]+ ","
+        }
+    }
+    if (libro.disponible){
+    document.getElementById("disponible").setAttribute("checked","checked");
+    }
+  });
     </script>
 </body>
 </html>

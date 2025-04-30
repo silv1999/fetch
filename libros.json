@@ -1,0 +1,13 @@
+{
+    "titulo": "La casa de los espíritus",
+    "autor": "Isabel Allende",
+    "precio": 9.99,
+    "disponible": false,
+    "genero": ["misterio","narrativo"],
+    "ficha": {
+        "editorial": "Norte",
+        "ISBN": "123-123214-15432",
+        "anio": 1982
+
+    }
+}
